@@ -15,6 +15,7 @@
       width: 150px;
     }
     .text {
+        text-align: center;
         border: 3px solid black;
         width: 50px ;
         padding: 10px 10px;
@@ -92,6 +93,7 @@
             if(valid(array)==false)
             {
                 document.getElementById('display').innerText='INVALID INPUT \n Please Reset!';
+                document.getElementById('submit').style.backgroundColor='grey';
                 document.getElementById('submit').disabled=true;
                 return;
             }
@@ -147,12 +149,14 @@
 
             document.getElementById('display').innerText="No winners. \n But hey no losers either! \n Try again?"
             document.getElementById('submit').disabled=true;
+            document.getElementById('submit').style.backgroundColor='grey';
         }
 
         //Function to Display winner and highlight fields
 
         function won(winner,a,b,c){
             document.getElementById('display').innerText=" WINNER IS : "+winner;
+            document.getElementById('submit').style.backgroundColor='grey';
             document.getElementById('submit').disabled=true;
             document.getElementById(a).style.backgroundColor='palegreen';
             document.getElementById(b).style.backgroundColor='palegreen';
@@ -168,6 +172,7 @@
                 document.getElementById(i).style.backgroundColor='white';
                 document.getElementById('display').innerText='';
                 document.getElementById('submit').disabled=false;
+                document.getElementById('submit').style.backgroundColor='wheat';
             }
 
         }
